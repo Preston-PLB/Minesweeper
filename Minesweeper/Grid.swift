@@ -12,7 +12,7 @@ struct Grid
 {
     var grid = [[Tile]]()
     
-    func tileAt(x:Int, y:Int) -> Tile
+    func tileAt(_ x:Int, _ y:Int) -> Tile
     {
         return grid[x][y]
     }
