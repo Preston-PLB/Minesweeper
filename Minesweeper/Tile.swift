@@ -36,14 +36,14 @@ struct Tile
 //        let bL: Tile? = board.tileAt(x + 1,y - 1)
 //        let b: Tile? = board.tileAt(x,y - 1)
 //        let bR: Tile? = board.tileAt(x + 1,y - 1)
-        let list: [Tile?] = [tL, t, tR, mL, mR, bL, b, bR]
-        for tile in list
-        {
-            if(tile != nil)
-            {
-                surroundingTiles.append(tile!)
-            }
-        }
+//        let list: [Tile?] = [tL, t, tR, mL, mR, bL, b, bR]
+//        for tile in list
+//        {
+//            if(tile != nil)
+//            {
+//                surroundingTiles.append(tile!)
+//            }
+//        }
         
     }
     
