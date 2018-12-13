@@ -32,6 +32,7 @@ class Game
     //Called after restart button is tapped
     func restart()
     {
+        restartButton?.isHidden = true
         Game.grid = Grid()
         gameStarted = false
         startGame()
