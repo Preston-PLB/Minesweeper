@@ -59,8 +59,7 @@ struct Tile
     mutating func makeClue()
     {
         type = .clue
-        //Call nearby tiles
-        //Loop through nearby tiles
+        getNearbyTiles()
         for tile in surroundingTiles
         {
             if(tile.type == .mine)
