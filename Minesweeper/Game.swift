@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class Game
 {
     static var grid = Grid()
     var gameStarted = false
+    
+    @IBOutlet var restartButton: UIButton?
     
     //Will create grids with different game settings
 //    init(settings:Settings)
@@ -23,26 +26,35 @@ class Game
     func startGame()
     {
         Game.grid.fillBoard()
+        gameStarted = true
     }
     
     //Called after restart button is tapped
     func restart()
     {
-        //hide all the tiles again
-        //reset timer and mine counter label
-        //gameStarted = false
+        Game.grid = Grid()
+        gameStarted = false
+        startGame()
     }
     
     //PSEUDO CODE, Implement when storyboard stuff is ready
     
-//    func checkTile(tile: Tile)
-//    {
+    func checkTile(tile: Tile)
+    {
+        if(tile.type == Tile.T.mine){
+            //timer.stop
+            restartButton?.isHidden = false
+        }else if(tile.type == Tile.T.clue){
+            //reveal clue
+        }else{
+            //reveal 0 clues
+        }
 //        take the type of tile from button
 //        if mine, lose the game, make restart button appear
 //        if clue, reveal the clue
 //        if blank, revealBlanks(tile)
-//    }
-//
+    }
+
 //    TODO replace with button press logic
 //        @IBAction func tilePressed(_ sender: UIButton)
 //    {
