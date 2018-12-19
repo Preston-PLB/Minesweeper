@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TileView: UIView{
+class TileView: UIImageView{
     
     var tile: Tile?
     
@@ -19,5 +19,9 @@ class TileView: UIView{
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    func setImage(imageType type: Tile.T){
+        self.image = UIImage(contentsOfFile: "Assets.xcassets.\(type)")
     }
 }
