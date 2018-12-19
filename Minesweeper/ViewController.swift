@@ -26,7 +26,7 @@ class ViewController: UIViewController
     func makeGrid(_ grid: [[Tile]])
     {
         let rows = UIStackView()
-        rows.frame = CGRect(x:0, y:0, width: screenBounds.width, height: screenBounds.height)
+        rows.frame = CGRect(x:0, y:0, width: screenBounds.width, height: screenBounds.height - 100)
         rows.axis = .horizontal
         rows.distribution = UIStackView.Distribution.fillEqually
         for r in 0...grid.count - 1

@@ -98,12 +98,19 @@ struct Grid
                 var c = 0
                 while(c < grid[r].count)
                 {
-                    if(Int.random(in: 0...10) == 0)
+                    if(grid[r][c].type != .mine)
                     {
-                        grid[r][c].setAsMine()
-                        grid[r][c].x = r
-                        grid[r][c].y = c
-                        minesLeft -= 1
+                        if(Int.random(in: 0...10) == 0)
+                        {
+                            grid[r][c].setAsMine()
+                            grid[r][c].x = r
+                            grid[r][c].y = c
+                            minesLeft -= 1
+                            if(minesLeft <= 0)
+                            {
+                                return
+                            }
+                        }
                     }
                     c += 1
                 }
