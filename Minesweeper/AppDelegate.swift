@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let rootController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+//        if let window = self.window
+//        {
+//            window.rootViewController = rootController
+//        }
+//        
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        guard let window = self.window
+//        else
+//        {
+//            fatalError("No Window")
+//        }
+//        window.rootViewController = ViewController()
+//        window.makeKeyAndVisible()
+        
         return true
     }
 

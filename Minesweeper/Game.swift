@@ -10,7 +10,7 @@ import Foundation
 
 class Game
 {
-    static var grid = Grid()
+    var grid = Grid.init()
     var gameStarted = false
     
     //Will create grids with different game settings
@@ -22,7 +22,7 @@ class Game
     //Called after first tile is tapped
     func startGame()
     {
-        Game.grid.fillBoard()
+        grid.fillBoard()
     }
     
     //Called after restart button is tapped

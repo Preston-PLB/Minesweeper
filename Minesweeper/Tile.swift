@@ -20,32 +20,38 @@ struct Tile
     var type = T.blank
     var nearbyMines = 0
     var surroundingTiles = [Tile]()
-    var board = Game.grid
+    //var board = Game.grid
     
+    init(x: Int, y: Int)
+    {
+        self.x = x
+        self.y = y
+//        getNearbyTiles()
+    }
     
     //Acesses board (which is a static variable)
     //Initializes surrounding tiles array
-    mutating func getNearbyTiles()
-    {
-        //Uncomment when have an initialized grid object
-        let tL: Tile? = board.tileAt(x - 1,y + 1)
-        let t: Tile? = board.tileAt(x,y + 1)
-        let tR: Tile? = board.tileAt(x + 1,y + 1)
-        let mL: Tile? = board.tileAt(x - 1,y)
-        let mR: Tile? = board.tileAt(x + 1,y)
-        let bL: Tile? = board.tileAt(x + 1,y - 1)
-        let b: Tile? = board.tileAt(x,y - 1)
-        let bR: Tile? = board.tileAt(x + 1,y - 1)
-        let list: [Tile?] = [tL, t, tR, mL, mR, bL, b, bR]
-        for tile in list
-        {
-            if(tile != nil)
-            {
-                surroundingTiles.append(tile!)
-            }
-        }
-        
-    }
+//    mutating func getNearbyTiles()
+//    {
+//        //Uncomment when have an initialized grid object
+//        let tL: Tile? = board.tileAt(x - 1,y + 1)
+//        let t: Tile? = board.tileAt(x,y + 1)
+//        let tR: Tile? = board.tileAt(x + 1,y + 1)
+//        let mL: Tile? = board.tileAt(x - 1,y)
+//        let mR: Tile? = board.tileAt(x + 1,y)
+//        let bL: Tile? = board.tileAt(x + 1,y - 1)
+//        let b: Tile? = board.tileAt(x,y - 1)
+//        let bR: Tile? = board.tileAt(x + 1,y - 1)
+//        let list: [Tile?] = [tL, t, tR, mL, mR, bL, b, bR]
+//        for tile in list
+//        {
+//            if(tile != nil)
+//            {
+//                surroundingTiles.append(tile!)
+//            }
+//        }
+//        
+//    }
     
     
     //Called when the board wants to create a mine
@@ -58,15 +64,18 @@ struct Tile
     //Called when board finishes placing mines
     mutating func makeClue()
     {
-        type = .clue
         //Call nearby tiles
         //Loop through nearby tiles
         for tile in surroundingTiles
         {
             if(tile.type == .mine)
             {
-                nearbyMines += 1
+                self.nearbyMines += 1
             }
+        }
+        if(self.nearbyMines > 0 && self.type != .mine)
+        {
+            self.type = .clue
         }
     }
 }
