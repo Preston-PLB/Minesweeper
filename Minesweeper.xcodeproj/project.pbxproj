@@ -11,12 +11,12 @@
 		3A74EE3B21BAEE6100A53797 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EE3A21BAEE6100A53797 /* Grid.swift */; };
 		DE43872E21BAE22100C770DA /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43872D21BAE22100C770DA /* Tile.swift */; };
 		DE4F8B1721B84B1B002F5313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F8B1621B84B1B002F5313 /* AppDelegate.swift */; };
-		DE4F8B1921B84B1B002F5313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F8B1821B84B1B002F5313 /* ViewController.swift */; };
 		DE4F8B1C21B84B1B002F5313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4F8B1A21B84B1B002F5313 /* Main.storyboard */; };
 		DE4F8B1E21B84B20002F5313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4F8B1D21B84B20002F5313 /* Assets.xcassets */; };
 		DE4F8B2121B84B20002F5313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4F8B1F21B84B20002F5313 /* LaunchScreen.storyboard */; };
 		DE4F8B2C21B84B20002F5313 /* MinesweeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F8B2B21B84B20002F5313 /* MinesweeperTests.swift */; };
 		DE4F8B3721B84B20002F5313 /* MinesweeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F8B3621B84B20002F5313 /* MinesweeperUITests.swift */; };
+		DED0E5EA21CAB3BC00EE0390 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED0E5E921CAB3BC00EE0390 /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		DE43872D21BAE22100C770DA /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		DE4F8B1321B84B1B002F5313 /* Minesweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4F8B1621B84B1B002F5313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE4F8B1821B84B1B002F5313 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE4F8B1B21B84B1B002F5313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE4F8B1D21B84B20002F5313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4F8B2021B84B20002F5313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		DE4F8B3221B84B20002F5313 /* MinesweeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinesweeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4F8B3621B84B20002F5313 /* MinesweeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperUITests.swift; sourceTree = "<group>"; };
 		DE4F8B3821B84B20002F5313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED0E5E921CAB3BC00EE0390 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				DE4F8B1621B84B1B002F5313 /* AppDelegate.swift */,
-				DE4F8B1821B84B1B002F5313 /* ViewController.swift */,
 				DE4F8B1A21B84B1B002F5313 /* Main.storyboard */,
 				DE4F8B1D21B84B20002F5313 /* Assets.xcassets */,
 				DE4F8B1F21B84B20002F5313 /* LaunchScreen.storyboard */,
@@ -112,6 +111,7 @@
 				DE43872D21BAE22100C770DA /* Tile.swift */,
 				3A74EE3A21BAEE6100A53797 /* Grid.swift */,
 				3A15DEF721C02B9E00BB74C6 /* Game.swift */,
+				DED0E5E921CAB3BC00EE0390 /* TileView.swift */,
 			);
 			path = Minesweeper;
 			sourceTree = "<group>";
@@ -267,8 +267,8 @@
 			files = (
 				DE43872E21BAE22100C770DA /* Tile.swift in Sources */,
 				3A15DEF821C02B9E00BB74C6 /* Game.swift in Sources */,
-				DE4F8B1921B84B1B002F5313 /* ViewController.swift in Sources */,
 				DE4F8B1721B84B1B002F5313 /* AppDelegate.swift in Sources */,
+				DED0E5EA21CAB3BC00EE0390 /* TileView.swift in Sources */,
 				3A74EE3B21BAEE6100A53797 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
