@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A15DEF821C02B9E00BB74C6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15DEF721C02B9E00BB74C6 /* Game.swift */; };
+		3A74EE3B21BAEE6100A53797 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EE3A21BAEE6100A53797 /* Grid.swift */; };
 		DE43872E21BAE22100C770DA /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43872D21BAE22100C770DA /* Tile.swift */; };
 		DE4F8B1721B84B1B002F5313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F8B1621B84B1B002F5313 /* AppDelegate.swift */; };
 		DE4F8B1921B84B1B002F5313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F8B1821B84B1B002F5313 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A15DEF721C02B9E00BB74C6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3A74EE3A21BAEE6100A53797 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		DE43872D21BAE22100C770DA /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		DE4F8B1321B84B1B002F5313 /* Minesweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4F8B1621B84B1B002F5313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				DE4F8B1F21B84B20002F5313 /* LaunchScreen.storyboard */,
 				DE4F8B2221B84B20002F5313 /* Info.plist */,
 				DE43872D21BAE22100C770DA /* Tile.swift */,
+				3A74EE3A21BAEE6100A53797 /* Grid.swift */,
+				3A15DEF721C02B9E00BB74C6 /* Game.swift */,
 			);
 			path = Minesweeper;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE43872E21BAE22100C770DA /* Tile.swift in Sources */,
+				3A15DEF821C02B9E00BB74C6 /* Game.swift in Sources */,
 				DE4F8B1921B84B1B002F5313 /* ViewController.swift in Sources */,
 				DE4F8B1721B84B1B002F5313 /* AppDelegate.swift in Sources */,
+				3A74EE3B21BAEE6100A53797 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,27 +20,30 @@ struct Tile
     var type = T.blank
     var nearbyMines = 0
     var surroundingTiles = [Tile]()
+    var board = Game.grid
     
-    //Acesses board (which is a global variable)
+    
+    //Acesses board (which is a static variable)
     //Initializes surrounding tiles array
     mutating func getNearbyTiles()
     {
-//        let tL: Tile? = board.getTile(x - 1, y + 1)
-//        let t: Tile? = board.getTile(x, y + 1)
-//        let tR: Tile? = board.getTile(x + 1, y + 1)
-//        let mL: Tile? = board.getTile(x - 1, y)
-//        let mR: Tile? = board.getTile(x + 1, y)
-//        let bL: Tile? = board.getTile(x + 1, y - 1)
-//        let b: Tile? = board.getTile(x, y - 1)
-//        let bR: Tile? = board.getTile(x + 1, y - 1)
-//        var list: [Tile?] = [tL, t, tR, mL, mR, bL, b, bR]
-//        for tile in list
-//        {
-//            if(tile != nil)
-//            {
-//                surroundingTiles.append(tile!)
-//            }
-//        }
+        //Uncomment when have an initialized grid object
+        let tL: Tile? = board.tileAt(x - 1,y + 1)
+        let t: Tile? = board.tileAt(x,y + 1)
+        let tR: Tile? = board.tileAt(x + 1,y + 1)
+        let mL: Tile? = board.tileAt(x - 1,y)
+        let mR: Tile? = board.tileAt(x + 1,y)
+        let bL: Tile? = board.tileAt(x + 1,y - 1)
+        let b: Tile? = board.tileAt(x,y - 1)
+        let bR: Tile? = board.tileAt(x + 1,y - 1)
+        let list: [Tile?] = [tL, t, tR, mL, mR, bL, b, bR]
+        for tile in list
+        {
+            if(tile != nil)
+            {
+                surroundingTiles.append(tile!)
+            }
+        }
         
     }
     
@@ -56,8 +59,7 @@ struct Tile
     mutating func makeClue()
     {
         type = .clue
-        //Call nearby tiles
-        //Loop through nearby tiles
+        getNearbyTiles()
         for tile in surroundingTiles
         {
             if(tile.type == .mine)
